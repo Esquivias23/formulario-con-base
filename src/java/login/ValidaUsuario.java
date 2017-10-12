@@ -46,8 +46,9 @@ Conexion Conexion = new Conexion();
             out.println("<head></head>");
             out.println("<body>");      
             out.print("<p> Boop </p>");
+            //comprobación de la conexión
             out.print(Conexion.getConexion());    
-            
+            //conexión
             try {
                 Conexion.Conectar();
                 ResultSet rsx = Conexion.consulta("select * from usuarios where nombre ='"+usuario+"' and contra='"+password+"';");

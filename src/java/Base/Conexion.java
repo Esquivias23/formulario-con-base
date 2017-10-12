@@ -39,18 +39,7 @@ public class Conexion {
         return instruction.executeQuery(consulta);
     }
     
-    public void insertar(String inserta) throws SQLException{
-        try {
-            instruction = conn.createStatement();
-            instruction.executeUpdate(inserta);
-            conn.close();
-        }
-        catch (SQLException error){
-            System.out.println(error.toString());
-        }
-        conn.close();
-    }
-    
+   //metodo para comprobar el estado de la conexión   
     public String getConexion(){
     Connection cn = null;
     String msg = "";
